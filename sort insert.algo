@@ -1,0 +1,30 @@
+ PROCEDURE insertion_sort(t:ARRAY_OF INTIGER) 
+BEGIN
+for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        
+        arr[j + 1] = key
+END
+
+ ALGORITHM insertion_sort 
+VAR  
+arr: ARRAY[1..N] OF INTEGER   
+i, j, key: INTEGER  
+BEGIN  
+write("Enter the size of the array (N):")  
+read(N)   
+write("Enter the elements of the array:")  
+FOR i := 1 TO N DO  
+    read(arr[i]) 
+END FOR  
+insertion_sort(arr) 
+    write("Sorted array:") 
+    FOR i := 1 TO N DO 
+        write(arr[i]) 
+    END 
+    FOR END
